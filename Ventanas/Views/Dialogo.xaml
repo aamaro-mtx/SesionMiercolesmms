@@ -1,0 +1,9 @@
+﻿<Window x:Class="Ventanas.Views.Dialogo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dialogo" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Cerrar" Width="92" Margin="98,212,102,25" Height="32" Click="CerrarClick"/>
+
+    </Grid>
+</Window>

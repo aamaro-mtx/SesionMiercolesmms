@@ -1,0 +1,25 @@
+﻿<Window x:Class="PryDelegateCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PryDelegateCommand.ViewModels"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        <TextBox x:Name="Texto"
+                 Text="{Binding Texto, UpdateSourceTrigger=PropertyChanged}"
+                 Height="20"
+                 Width="200">
+        </TextBox>
+        <TextBlock Height="20"
+                   Width="200" />
+        <Button Content="Convertir a Mayúsculas"
+                Width="150"
+                Command="{Binding ComandoConvertirAMayusculas}"
+                CommandParameter="{Binding Texto}" />
+        <Button Content="Cerrar Aplicación"
+                Width="150"
+                Command="{Binding ComandoCerrarAplicacion}" />
+    </StackPanel>
+</Window>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventanas", "Ventanas\Ventanas.csproj", "{54739B2D-967E-40F1-95FD-731C9B01D0B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateCommand", "DelegateCommand\DelegateCommand.csproj", "{7958017C-E3B4-4228-AE38-448662463FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colores", "Colores\Colores.csproj", "{3D60A0EC-D533-43EE-9746-DE93C2A55723}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54739B2D-967E-40F1-95FD-731C9B01D0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54739B2D-967E-40F1-95FD-731C9B01D0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54739B2D-967E-40F1-95FD-731C9B01D0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54739B2D-967E-40F1-95FD-731C9B01D0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7958017C-E3B4-4228-AE38-448662463FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7958017C-E3B4-4228-AE38-448662463FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7958017C-E3B4-4228-AE38-448662463FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7958017C-E3B4-4228-AE38-448662463FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D60A0EC-D533-43EE-9746-DE93C2A55723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D60A0EC-D533-43EE-9746-DE93C2A55723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D60A0EC-D533-43EE-9746-DE93C2A55723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D60A0EC-D533-43EE-9746-DE93C2A55723}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
