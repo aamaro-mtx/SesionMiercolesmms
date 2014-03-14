@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Windows.Media;
+using Colores.Commands;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
 
 namespace Colores.ViewModels
 {
@@ -13,10 +9,24 @@ namespace Colores.ViewModels
     {
         public ColoresViewModel()
         {
-
+            MouseMoveCommand = new DelegateCommand(ExecuteMouseMoveCommand, s => true);
         }
 
+        public DelegateCommand MouseMoveCommand { get; private set; }
+
         #region Propiedades
+        private Brush _bgbrush;
+
+        public Brush BackGroundBrush
+        {
+            get { return _bgbrush; }
+            set
+            {
+                _bgbrush = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string _colorName;
 
         public string ColorName
@@ -29,7 +39,18 @@ namespace Colores.ViewModels
             }
         }
 
-
+        void ExecuteMouseMoveCommand(object parameter)
+        {
+            if (MouseMoveCommand != null)
+            {
+                var bgtmp = parameter as SolidColorBrush;
+                if (bgtmp != null)
+                {
+                    BackGroundBrush = bgtmp;
+                    ColorName = bgtmp.ToString();
+                }
+            }
+        }
 
         #endregion
 
