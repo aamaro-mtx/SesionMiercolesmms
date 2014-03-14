@@ -2,12 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:Colores.ViewModels"
+        xmlns:cv="clr-namespace:Colores.Converters"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         Title="Colores" Height="350" Width="525">
     <Window.DataContext>
         <vm:ColoresViewModel ColorName="#000" BackGroundBrush="#000"/>
     </Window.DataContext>
-
+<Window.Resources>
+    <cv:HexToColorConverter x:Key="Hex2Col"/>
+</Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -54,7 +57,7 @@
             </i:Interaction.Triggers>
         </Button>
 
-        <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Content="{Binding ColorName}" 
+        <Label Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Content="{Binding ColorName,Converter={StaticResource Hex2Col}}" 
                Foreground="White" FontSize="30" Background="{Binding BackGroundBrush}"/>
 
     </Grid>
