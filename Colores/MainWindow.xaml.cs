@@ -24,5 +24,10 @@ namespace Colores
         {
             InitializeComponent();
         }
+
+        private void UIElement_OnMouseMove(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("demo");
+        }
     }
 }

@@ -8,6 +8,11 @@ namespace Colores.Commands
         private Action<object> _execute;
         private Predicate<object> _canExecute;
 
+        public DelegateCommand(Action<object> execute, Predicate<object> canExecute)
+        {
+            _execute = execute;
+            _canExecute = canExecute;
+        }
 
         #region ICommand Members
 
