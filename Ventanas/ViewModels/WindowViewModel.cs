@@ -9,8 +9,8 @@ namespace Ventanas.ViewModels
     {
         public WindowViewModel()
         {
-            AddTwoNumbersCommand = new DelegateCommand(ExecuteAddTwoNumbersCommand,CanExecuteAddTwoNumbersCommand);
-            ShowWindowCommand = new DelegateCommand(ExecuteShowWindowCommand, CanExecutedShowWindow);
+            AddTwoNumbersCommand = new DelegateCommand(ExecuteAddTwoNumbersCommand, CanExecuteAddTwoNumbersCommand);
+            ShowWindowCommand = new DelegateCommand(ExecuteShowWindowCommand, (s) => true);
         }
 
         public DelegateCommand ShowWindowCommand { get; private set; }
@@ -37,12 +37,6 @@ namespace Ventanas.ViewModels
                 CommandShowWindowExecuted(this, EventArgs.Empty);
             }
         }
-
-        bool CanExecutedShowWindow(object parameter)
-        {
-            return true;
-        }
-
 
         #region Propiedades
         private int _number1;
@@ -89,10 +83,10 @@ namespace Ventanas.ViewModels
                 _result = value;
                 //if (value != _result)
                 //{
-                    OnPropertyChanged();
+                OnPropertyChanged();
                 //}
             }
-        } 
+        }
         #endregion
 
 
